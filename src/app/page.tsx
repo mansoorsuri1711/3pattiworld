@@ -195,10 +195,10 @@ export default function Home() {
                 Free · Android · Game · {APP_RATING_VALUE}★ ({Number(APP_RATING_COUNT).toLocaleString()}+)
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                <span className="text-white">3 Patti World</span>
+                <span className="text-white">{SITE_NAME}</span>
               </h1>
               <p className="text-lg text-gray-300 leading-relaxed">
-                <BrandText text="3 Patti World brings Teen Patti, Dragon vs Tiger, Rummy, slots and more to Android with JazzCash and EasyPaisa payouts for Pakistan. Use the button below for the official APK, then follow this guide for account setup, deposits, withdrawals and safety checks on version V1.169." />
+                <BrandText text="Teen Patti World brings Teen Patti, Dragon vs Tiger, Rummy, slots and more to Android with JazzCash and EasyPaisa payouts for Pakistan. Use the button below for the official APK, then follow this guide for account setup, deposits, withdrawals and safety checks on version V1.169." />
               </p>
               <div id="download" className="flex justify-center lg:justify-start pt-2">
                 <DownloadButton />

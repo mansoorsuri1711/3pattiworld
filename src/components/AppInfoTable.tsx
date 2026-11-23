@@ -6,10 +6,18 @@ import {
   APP_RATING_VALUE,
   APP_RATING_COUNT,
   SITE_NAME,
+  SITE_ORIGIN,
 } from '@/lib/site';
 
 const appInfoRows = [
-  { label: 'App Name', value: SITE_NAME },
+  {
+    label: 'App Name',
+    value: (
+      <a href={SITE_ORIGIN} className="text-accent hover:text-accent-light font-medium">
+        {SITE_NAME}
+      </a>
+    ),
+  },
   { label: 'Developer', value: APP_DEVELOPER },
   { label: 'Category', value: 'Cards, Game' },
   { label: 'App Size', value: APP_SIZE },

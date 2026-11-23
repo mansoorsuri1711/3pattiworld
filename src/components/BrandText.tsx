@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { ROUTES } from "@/lib/routes";
+import { SITE_ORIGIN } from "@/lib/site";
 
-const BRAND_MARKERS = ["3 Patti World", "3Patti World"] as const;
+const BRAND_MARKERS = ["Teen Patti World", "3 Patti World", "3Patti World"] as const;
+const BRAND_DISPLAY = "Teen Patti World";
 
 type BrandMarker = (typeof BRAND_MARKERS)[number];
 
@@ -21,7 +21,7 @@ export function findFirstBrandMatch(text: string): { index: number; marker: Bran
   return { index: earliest, marker };
 }
 
-/** Link the first brand mention in text to the homepage */
+/** Link the first brand mention in text to the official site */
 export default function BrandText({ text }: { text: string }) {
   const match = findFirstBrandMatch(text);
   if (!match) return <>{text}</>;
@@ -30,9 +30,9 @@ export default function BrandText({ text }: { text: string }) {
   return (
     <>
       {text.slice(0, index)}
-      <Link href={ROUTES.home} className="text-accent hover:text-accent-light font-medium">
-        {marker}
-      </Link>
+      <a href={SITE_ORIGIN} className="text-accent hover:text-accent-light font-medium">
+        {BRAND_DISPLAY}
+      </a>
       {text.slice(index + marker.length)}
     </>
   );
@@ -53,9 +53,9 @@ export function createSingleBrandLinker() {
     return (
       <>
         {text.slice(0, index)}
-        <Link href={ROUTES.home} className="text-accent hover:text-accent-light font-medium">
-          {marker}
-        </Link>
+        <a href={SITE_ORIGIN} className="text-accent hover:text-accent-light font-medium">
+          {BRAND_DISPLAY}
+        </a>
         {text.slice(index + marker.length)}
       </>
     );
