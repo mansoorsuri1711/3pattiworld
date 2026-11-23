@@ -1,4 +1,4 @@
-import { SITE_ORIGIN } from "@/lib/site";
+import { APP_WEBSITE_URL } from "@/lib/site";
 
 const BRAND_MARKERS = ["Teen Patti World", "3 Patti World", "3Patti World"] as const;
 const BRAND_DISPLAY = "Teen Patti World";
@@ -30,7 +30,12 @@ export default function BrandText({ text }: { text: string }) {
   return (
     <>
       {text.slice(0, index)}
-      <a href={SITE_ORIGIN} className="text-accent hover:text-accent-light font-medium">
+      <a
+        href={APP_WEBSITE_URL}
+        className="text-accent hover:text-accent-light font-medium"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {BRAND_DISPLAY}
       </a>
       {text.slice(index + marker.length)}
@@ -53,7 +58,12 @@ export function createSingleBrandLinker() {
     return (
       <>
         {text.slice(0, index)}
-        <a href={SITE_ORIGIN} className="text-accent hover:text-accent-light font-medium">
+        <a
+          href={APP_WEBSITE_URL}
+          className="text-accent hover:text-accent-light font-medium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {BRAND_DISPLAY}
         </a>
         {text.slice(index + marker.length)}

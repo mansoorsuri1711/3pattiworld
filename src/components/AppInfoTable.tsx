@@ -5,20 +5,37 @@ import {
   APP_LAST_UPDATE,
   APP_RATING_VALUE,
   APP_RATING_COUNT,
+  APP_WEBSITE_URL,
   SITE_NAME,
-  SITE_ORIGIN,
 } from '@/lib/site';
 
 const appInfoRows = [
   {
     label: 'App Name',
     value: (
-      <a href={SITE_ORIGIN} className="text-accent hover:text-accent-light font-medium">
+      <a
+        href={APP_WEBSITE_URL}
+        className="text-accent hover:text-accent-light font-medium"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {SITE_NAME}
       </a>
     ),
   },
-  { label: 'Developer', value: APP_DEVELOPER },
+  {
+    label: 'Developer',
+    value: (
+      <a
+        href={APP_WEBSITE_URL}
+        className="text-accent hover:text-accent-light font-medium"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {APP_DEVELOPER}
+      </a>
+    ),
+  },
   { label: 'Category', value: 'Cards, Game' },
   { label: 'App Size', value: APP_SIZE },
   { label: 'Version', value: APP_VERSION },

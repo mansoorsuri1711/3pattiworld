@@ -23,6 +23,8 @@ export const SITE_ORIGIN = "https://teenpattiworld-vip.com";
 export const SITE_DOMAIN = "teenpattiworld-vip.com";
 /** Canonical host for game screenshots / icons (user-specified CDN) */
 export const IMAGE_CDN_ORIGIN = "https://3pattiworldapp.com.pk";
+/** Official app / developer site linked from brand mentions */
+export const APP_WEBSITE_URL = "https://3pattiworldapp.com.pk/";
 export const SUPPORT_EMAIL = "support@teenpattiworld-vip.com";
 export const APP_VERSION = "V1.169(1)";
 export const APP_SIZE = "49MB";
